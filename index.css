@@ -46,7 +46,8 @@ canvas {
 .text3 {
   font-size: 1rem; /* Ajuste conforme necessário */
   position: absolute; /* Sobreposição ao canvas */
-  color: white;
+  color: gray;
+  opacity: 60%;
   top: 90%;
   left: 15%;
   transform: translate(-50%, -50%);

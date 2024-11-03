@@ -64,6 +64,7 @@ canvas {
   }
   .text3 {
     font-size: 0.8rem;
+    top: 90%;
     left: 15%;
   }
 }

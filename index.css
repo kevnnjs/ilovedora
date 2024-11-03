@@ -47,7 +47,7 @@ canvas {
   font-size: 1rem; /* Ajuste conforme necessário */
   position: absolute; /* Sobreposição ao canvas */
   color: white;
-  top: 95%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

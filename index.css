@@ -56,11 +56,11 @@ canvas {
 /* Media Queries para ajuste em diferentes tamanhos de tela */
 @media (max-width: 991px) {
   .text1 {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
     top: 48%;
   }
   .text2 {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     top: 49.5%;
   }
   .text3 {

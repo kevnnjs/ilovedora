@@ -132,24 +132,20 @@ void main() {
     float dist = getSegment(t, pos, 0.0, scale);
     float glow = getGlow(dist, radius, intensity);
     
-    vec3 col = vec3(0.0);
+    vec3 col = vec3(0.0); // Cor inicial em preto
 
-    // White core
-    col += 10.0 * vec3(smoothstep(0.003, 0.001, dist));
-    // Pink glow
-    col += glow * vec3(1.0, 0.05, 0.3);
-    
+    // Brilho roxo
+    col += glow * vec3(0.6, 0.2, 0.8); // Cor roxa clara
+
     // Get second segment
     dist = getSegment(t, pos, 3.4, scale);
     glow = getGlow(dist, radius, intensity);
     
-    // White core
-    col += 10.0 * vec3(smoothstep(0.003, 0.001, dist));
-    // Dark purple glow (#481658)
-    col += glow * vec3(0.284, 0.086, 0.349); // Corresponde ao #481658
+    // Brilho roxo escuro
+    col += glow * vec3(0.4, 0.0, 0.4); // Cor roxa escura
 
-    // Adding black for depth
-    col = mix(col, vec3(0.0), 0.2); // Blend with black for depth
+    // Adiciona preto para profundidade
+    col = mix(col, vec3(0.0), 0.3); // Blend com preto para profundidade
         
     // Tone mapping
     col = 1.0 - exp(-col);
@@ -161,6 +157,7 @@ void main() {
     gl_FragColor = vec4(col, 1.0);
 }
 `;
+
 
 window.addEventListener("resize", onWindowResize, false);
 

@@ -1,0 +1,69 @@
+::-webkit-scrollbar {
+  display: none; /* Para navegadores WebKit (Chrome, Safari, etc.) */
+}
+
+body {
+  background-color: #000;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh; /* Altura total da tela */
+}
+
+.container {
+  position: relative; /* Permite o uso de absolute nos filhos */
+  height: 100%; /* Altura do contêiner igual à altura da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+canvas {
+  display: block;
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: 100%; /* Ocupa toda a altura disponível */
+}
+
+
+.text1 {
+  font-size: 2.5rem; /* Tamanho padrão */
+  color: white;
+  position: absolute; /* Sobreposição ao canvas */
+  top: 45%; /* Centraliza verticalmente */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text2 {
+  font-size: 1.5rem; /* Ajuste conforme necessário */
+  color: white;
+  position: absolute; /* Sobreposição ao canvas */
+  top: 55%; /* Ajusta conforme necessário */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text3 {
+  font-size: 1rem; /* Ajuste conforme necessário */
+  position: absolute; /* Sobreposição ao canvas */
+  color: white;
+  top: 95%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+
+/* Media Queries para ajuste em diferentes tamanhos de tela */
+@media (max-width: 991px) {
+  .text1 {
+    font-size: 0.9rem;
+    top: 48%;
+  }
+  .text2 {
+    font-size: 0.7rem;
+    top: 49.5%;
+  }
+  .text3 {
+    font-size: 0.8rem;
+    left: 15%;
+  }
+}
